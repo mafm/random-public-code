@@ -3,11 +3,11 @@
 
 -n --dry-run
 -h --help      show this
--v --verbose   Log more than default
--q --quiet     Log less than default
+-v --verbose   log more than default
+-q --quiet     log less than default
 
 Example:
-  python replicate_zfs_snapshots.py sydney tank-microserver-0-mirror-2tb/share/kapsia tank/sydney-tank-replica/share/kapsia
+  replicate_zfs_snapshots.py sydney tank-microserver-0-mirror-2tb/share/kapsia tank/sydney-tank-replica/share/kapsia
 
 This script synchronizes ZFS snapshots between filesystems on a local and remote linux box.
 
@@ -24,7 +24,6 @@ We assume that:
   snapshot in common.
 
 This script could be smarter and better:
-* We could add command line arguments.
 * We could add another script to check that the two filesystems were
   actually synchronised successfully.
 * We could make sure that all snapshots matched. Even if we have one
